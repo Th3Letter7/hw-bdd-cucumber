@@ -36,6 +36,7 @@ When /^(.*) within (.*[^:])$/ do |step, parent|
   with_scope(parent) { When step }
 end
 
+
 # Multi-line step scoper
 When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
   with_scope(parent) { When "#{step}:", table_or_string }
@@ -252,3 +253,4 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+
